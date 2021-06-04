@@ -1,0 +1,11 @@
+.nav {
+  padding-left: 35px;
+}
+
+.content {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background: #888;
+  color: #fff;
+}
