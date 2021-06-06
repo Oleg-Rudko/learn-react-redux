@@ -5,6 +5,12 @@ const reducer = (state = initialState, action) => {
     case "Something": {
       return null;
     }
+    case "HELLO": {
+      return {
+        ...state,
+        one: action.payload,
+      };
+    }
     default: {
       return state;
     }
