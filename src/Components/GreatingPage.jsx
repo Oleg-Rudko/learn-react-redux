@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-export default function GreatingPage() {
-  return (
-    <div>Wellcome on the «Greatin page»</div>
-  )
-}
+const GreatingPage = () => {
+  return <div>Wellcome on the «Greatin page»</div>;
+};
+
+export default GreatingPage;
