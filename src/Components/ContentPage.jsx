@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
-export default function ContentPage() {
-  return (
-    <div>
-      This content
-    </div>
-  )
-}
+const ContentPage = () => {
+  return <div>This content</div>;
+};
+
+export default ContentPage;
