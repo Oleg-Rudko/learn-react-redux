@@ -1,0 +1,7 @@
+1. Подключить react-bootsrap
+2. Create a login page
+3. If login succes go to the route page
+4. If login false then go to the Login Page
+  a. Local storage we want to save key "isLoginSuccesful"
+
+4. Create route Todo app 

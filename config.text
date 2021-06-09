@@ -1,0 +1,50 @@
+Magic string && magic number
+
+const allItemsInArray = 3;
+if(data.length === allItemsInArray)
+
+const getNameFromUserTable = 'Oleg';
+
+if(name === getNameFromUserTable)
+if(nameOftype === getNameFromUserTable)
+
+
+
+<File 
+  name="Oleg"
+  age="n"
+/>
+
+<File 
+  name="Ihorh"
+  age="n"
+  gender="male"
+/>
+
+<File
+   name="Ihorh"
+   age="n"
+   gender="male"
+   arrayOfColors={arrayOfColors}
+/>
+
+const File = ({name, age, gender, arrayOfColors}) => {
+  return (
+    <>
+      <p>{name}</p>
+      <p>{age}</p>
+      {gender && (<p>{gender}</p>)}
+      color
+    </>
+  )
+}
+
+DRY = don't repeat yourself > 5 years expirience
+
+const File = () => (
+  <>
+    <p></p>
+  </>
+)
+
+const isSettingsInTableIsFalseWeSendApiToRails 
