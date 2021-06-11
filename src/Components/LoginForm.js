@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { useHistory } from "react-router";
 import { backend } from "../backend/store";
-// import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
+  const history = useHistory();
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -27,10 +28,12 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     if (
       form.email === backend.user_credential.email &&
-      form.password === backend.user_credential.password &&
-      form.inputRememberMe === true
+      form.password === backend.user_credential.password
     ) {
-      window.localStorage.setItem("isLogin", true);
+      if (form.inputRememberMe) {
+        window.localStorage.setItem("isLogin", true);
+      }
+      history.push({ pathname: "/main-page" });
     }
     e.preventDefault();
   };
@@ -64,11 +67,9 @@ const LoginForm = () => {
             onChange={inputRememberMe}
           />
         </Form.Group>
-        {/* <Link to="/main-page"> */}
-          <Button variant="success" type="submit">
-            Submit
-          </Button>
-        {/* </Link> */}
+        <Button variant="success" type="submit">
+          Submit
+        </Button>
       </Form>
     </div>
   );
