@@ -1,8 +1,8 @@
 import React from "react";
 import LoginForm from "./LoginForm";
-import MainPage from './MainPage';
+import MainPage from "./MainPage";
 
-const LogInPage = () => {
+const LoginPage = () => {
   return (
     <>
       {localStorage.getItem("isLogin") === "false" ? (
@@ -14,4 +14,4 @@ const LogInPage = () => {
   );
 };
 
-export default LogInPage;
+export default LoginPage;
