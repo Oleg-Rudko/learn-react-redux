@@ -1,8 +1,5 @@
 import React from "react";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import Routing from './Components/Routing';
-// import { Switch, Route } from "react-router-dom";
+import Routing from "./Components/Routing";
 // import { useDispatch, useSelector } from "react-redux";
 
 const App = () => {
