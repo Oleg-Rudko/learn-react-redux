@@ -1,6 +1,6 @@
 export const backend = {
   user_credential: {
-    name: "learn-react-redux",
-    password: "react-redux",
+    email: "salfetnikov92@gmail.com",
+    password: "0000",
   },
 };
