@@ -2,10 +2,9 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import MainPage from "./MainPage";
-import TodoApp from "./TodoApp";
+import TodoApp from "./TofoApp/TodoApp";
 
 const Routing = () => {
-  console.log(localStorage.getItem("isLogin"));
   return (
     <Switch>
       <Route exact path="/" component={LoginPage} />
