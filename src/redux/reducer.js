@@ -10,13 +10,6 @@ const reducer = (state = initialState, action) => {
           action.value,
         ]
       }
-      
-    }
-    case "HELLO": {
-      return {
-        ...state,
-        one: action.payload,
-      };
     }
     default: {
       return state;
