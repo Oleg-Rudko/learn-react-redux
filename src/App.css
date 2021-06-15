@@ -1,11 +1,10 @@
-.nav {
-  padding-left: 35px;
+.content {
+  border: 1px solid #333;
+  padding: 15px;
+  width: 70%;
+  margin: 50px auto;
 }
 
-.content {
-  width: 50%;
-  margin: 0 auto;
+.contentMainpage {
   text-align: center;
-  background: #888;
-  color: #fff;
 }

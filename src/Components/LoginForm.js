@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useHistory } from "react-router";
 import { backend } from "../backend/store";
+import '../App.css';
 
 const LoginForm = () => {
   const history = useHistory();
@@ -39,7 +40,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="logInPag">
+    <div className='content'>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
