@@ -2,14 +2,14 @@ import { initialState } from "./initialState";
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "Something": {
-      return null;
-    }
-    case "HELLO": {
+    case 'ADD_TODO': {
       return {
         ...state,
-        one: action.payload,
-      };
+        arrayTodo: [
+          ...state.arrayTodo,
+          action.value,
+        ]
+      }
     }
     default: {
       return state;
