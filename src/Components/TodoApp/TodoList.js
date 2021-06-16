@@ -5,23 +5,21 @@ import { removeTodo } from "../../redux/helperFunctions";
 import "./todoList.css";
 
 const TodoList = () => {
-  const arrayTodo = useSelector(getTodos);
+  const arrayTodos = useSelector(getTodos);
   const dispatch = useDispatch();
 
   return (
     <ul className="listTodo">
-      {arrayTodo.length !== 0 &&
-        arrayTodo.map(({ id, name }) => (
-          <div className='listTodoWrap' key={id}>
-            <li className="listItem" >
-              {name}
-            </li>
+      {arrayTodos.length !== 0 &&
+        arrayTodos.map(({ id, name }) => (
+          <div className="listTodoWrap" key={id}>
+            <li className="listItem">{name}</li>
             <button
               className="btnRemoveTodo"
-              title='Remove task'
+              title="Remove task"
               onClick={() => dispatch(removeTodo(id))}
             >
-              X
+              &#10005;
             </button>
           </div>
         ))}

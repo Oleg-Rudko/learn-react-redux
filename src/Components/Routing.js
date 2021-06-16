@@ -11,7 +11,6 @@ const Routing = () => {
         <Route exact path="/" component={LoginPage} />
         <Route path="/main-page" component={MainPage} />
         <Route path="/todo-app" component={TodoApp} />
-        {/* {localStorage.getItem("isLogin") && <Redirect to="/" />} */}
       </Switch>
       <Redirect to="/" />
     </>
