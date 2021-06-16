@@ -27,3 +27,8 @@
   background: transparent;
   border: none;
 }
+
+.activeItems {
+  width: 70%;
+  margin: 0 auto;
+}
