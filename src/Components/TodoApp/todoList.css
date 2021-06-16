@@ -19,6 +19,10 @@
   border-bottom: 1px solid #111;
 }
 
+.itemWrap {
+  width: 100%;
+}
+
 .listItem {
   list-style: none;
 }
