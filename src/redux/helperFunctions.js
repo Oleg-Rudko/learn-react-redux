@@ -8,8 +8,8 @@ export const removeTodo = (id) => ({
   value: id,
 });
 
-export const complet = ({isActive, id}) => ({
-  type: 'COMPLET_TODO',
+export const complete = ({ isActive, id }) => ({
+  type: "complete_TODO",
   value: isActive,
-  id
+  id,
 });
