@@ -11,6 +11,14 @@ const reducer = (state = initialState, action) => {
         ]
       }
     }
+
+    case 'REMOVE_TODO': {
+      return {
+        ...state,
+        arrayTodo: state.arrayTodo.filter(({id}) => id !== action.value)
+      }
+    }
+
     default: {
       return state;
     }

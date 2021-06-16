@@ -1,16 +1,16 @@
-import React, { useState, useMemo } from "react";
-import { InputGroup, Button, FormControl } from "react-bootstrap";
+import React, { useState } from "react";
+import { InputGroup, FormControl } from "react-bootstrap";
 import GetId from "./GetId";
 import { useDispatch } from "react-redux";
 import { addTodoToStore } from "../../redux/helperFunctions";
-import '../../App.css';
+import './todoList.css';
 
 const InputTodoApp = () => {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
 
-  const submit = () => {
-    if (input) {
+  const submit = (e) => {
+    if (input && e.charCode === 13) {
       dispatch(
         addTodoToStore({
           id: GetId(),
@@ -22,14 +22,6 @@ const InputTodoApp = () => {
     }
   };
 
-  const disabledButton = useMemo(() => {
-    if (input) {
-      return false;
-    } else {
-      return true;
-    }
-  }, [input]);
-
   const onHandleInput = ({ target: { value } }) => {
     setInput(value);
   };
@@ -37,20 +29,12 @@ const InputTodoApp = () => {
   return (
     <div className='content'>
       <InputGroup className="mb-3">
-        <InputGroup.Prepend>
-          <Button
-            variant="outline-secondary"
-            onClick={submit}
-            disabled={disabledButton}
-          >
-            Add todo
-          </Button>
-        </InputGroup.Prepend>
         <FormControl
           aria-describedby="basic-addon1"
           placeholder="Enter todo task"
           value={input}
           onChange={onHandleInput}
+          onKeyPress={submit}
         />
         </InputGroup>
     </div>
