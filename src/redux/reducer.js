@@ -5,21 +5,21 @@ const reducer = (state = initialState, action) => {
     case "ADD_TODO": {
       return {
         ...state,
-        arrayTodo: [...state.arrayTodo, action.value],
+        arrayTodos: [...state.arrayTodos, action.value],
       };
     }
 
     case "REMOVE_TODO": {
       return {
         ...state,
-        arrayTodo: state.arrayTodo.filter(({ id }) => id !== action.value),
+        arrayTodos: state.arrayTodos.filter(({ id }) => id !== action.value),
       };
     }
 
     case "COMPLETE_TODO": {
       return {
         ...state,
-        arrayTodo: state.arrayTodo.map((item) => {
+        arrayTodos: state.arrayTodos.map((item) => {
           if (item.id !== action.id) {
             return item;
           }
@@ -31,7 +31,7 @@ const reducer = (state = initialState, action) => {
     case "ALL_COMPLETE": {
       return {
         ...state,
-        arrayTodo: state.arrayTodo.map((item) => {
+        arrayTodos: state.arrayTodos.map((item) => {
           return { ...item, isActive: action.value };
         }),
       };

@@ -14,7 +14,7 @@ export const complete = ({ isActive, id }) => ({
   id,
 });
 
-export const allCompleted = ({ isActive}) => ({
-  type: 'ALL_COMPLETE',
+export const allCompleted = ({ isActive }) => ({
+  type: "ALL_COMPLETE",
   value: isActive,
-})
+});
