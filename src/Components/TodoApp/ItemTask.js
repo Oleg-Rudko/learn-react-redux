@@ -8,6 +8,7 @@ const ItemTask = ({ id, name, isActive }) => {
   return (
     <label className="itemWrap">
       <input
+        className='itemCheckbox'
         type="checkbox"
         id={id}
         checked={isActive}
