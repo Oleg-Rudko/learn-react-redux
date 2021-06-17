@@ -16,6 +16,18 @@ const reducer = (state = initialState, action) => {
       };
     }
 
+    case "complete_TODO": {
+      return {
+        ...state,
+        arrayTodos: state.arrayTodos.map((item) => {
+          if (item.id !== action.id) {
+            return item;
+          }
+          return { ...item, isActive: action.value };
+        }),
+      };
+    }
+
     default: {
       return state;
     }

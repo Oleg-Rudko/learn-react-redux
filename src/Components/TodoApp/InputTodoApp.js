@@ -3,7 +3,7 @@ import { InputGroup, FormControl } from "react-bootstrap";
 import GetId from "./GetId";
 import { useDispatch } from "react-redux";
 import { addTodoToStore } from "../../redux/helperFunctions";
-import './todoList.css';
+import "./todoList.css";
 
 const InputTodoApp = () => {
   const [input, setInput] = useState("");
@@ -27,7 +27,7 @@ const InputTodoApp = () => {
   };
 
   return (
-    <div className='content'>
+    <div className="content">
       <InputGroup className="mb-3">
         <FormControl
           aria-describedby="basic-addon1"
@@ -36,7 +36,7 @@ const InputTodoApp = () => {
           onChange={onHandleInput}
           onKeyPress={submit}
         />
-        </InputGroup>
+      </InputGroup>
     </div>
   );
 };
