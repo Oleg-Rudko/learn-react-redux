@@ -16,13 +16,22 @@ const reducer = (state = initialState, action) => {
       };
     }
 
-    case "complete_TODO": {
+    case "COMPLETE_TODO": {
       return {
         ...state,
         arrayTodos: state.arrayTodos.map((item) => {
           if (item.id !== action.id) {
             return item;
           }
+          return { ...item, isActive: action.value };
+        }),
+      };
+    }
+
+    case "ALL_COMPLETE": {
+      return {
+        ...state,
+        arrayTodos: state.arrayTodos.map((item) => {
           return { ...item, isActive: action.value };
         }),
       };

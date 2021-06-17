@@ -9,7 +9,12 @@ export const removeTodo = (id) => ({
 });
 
 export const complete = ({ isActive, id }) => ({
-  type: "complete_TODO",
+  type: "COMPLETE_TODO",
   value: isActive,
   id,
+});
+
+export const allCompleted = ({ isActive }) => ({
+  type: "ALL_COMPLETE",
+  value: isActive,
 });

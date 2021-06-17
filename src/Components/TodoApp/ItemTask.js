@@ -10,7 +10,7 @@ const ItemTask = ({ id, name, isActive }) => {
       <input
         type="checkbox"
         id={id}
-        value={isActive}
+        checked={isActive}
         onChange={(e) => dispatch(complete({ id, isActive: e.target.checked }))}
       />
 

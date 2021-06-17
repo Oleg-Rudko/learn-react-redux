@@ -3,6 +3,7 @@ import { InputGroup, FormControl } from "react-bootstrap";
 import GetId from "./GetId";
 import { useDispatch } from "react-redux";
 import { addTodoToStore } from "../../redux/helperFunctions";
+import ButtonAllCompleted from "./ButtonAllCompleted";
 import "./todoList.css";
 
 const InputTodoApp = () => {
@@ -28,6 +29,7 @@ const InputTodoApp = () => {
 
   return (
     <div className="content">
+      <ButtonAllCompleted />
       <InputGroup className="mb-3">
         <FormControl
           aria-describedby="basic-addon1"
