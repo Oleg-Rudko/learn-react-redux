@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { getTodos } from "../../redux/selectors";
+import BtnGroup from "./BtnGroup";
 import "./todoList.css";
 
 const ActiveItems = () => {
@@ -15,7 +16,12 @@ const ActiveItems = () => {
     return undefined;
   });
 
-  return <p className="activeItems">{count} items left</p>;
+  return (
+    <div className="activeItems">
+      <p>{count} items left</p>
+      <BtnGroup />
+    </div>
+  ) 
 };
 
 export default ActiveItems;

@@ -16,6 +16,12 @@ const reducer = (state = initialState, action) => {
       };
     }
 
+    case "CLEAR_TODO": {
+      return {
+        arrayTodos: action.value,
+      }
+    }
+
     case "COMPLETE_TODO": {
       return {
         ...state,

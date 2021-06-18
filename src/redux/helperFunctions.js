@@ -8,6 +8,11 @@ export const removeTodo = (id) => ({
   value: id,
 });
 
+export const clearTodo = () => ({
+  type: "CLEAR_TODO",
+  value: [],
+})
+
 export const complete = ({ isActive, id }) => ({
   type: "COMPLETE_TODO",
   value: isActive,
