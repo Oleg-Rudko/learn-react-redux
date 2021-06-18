@@ -11,16 +11,31 @@
   border: 1px solid #333;
   min-height: 50px;
   padding: 10px 20px;
+  border-bottom: 1px solid #111;
 }
 
 .listTodoWrap {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #111;
+  background:#9e9e9e2e;
+  position: relative;
+  height: 40px;
+  margin-bottom: 10px;
 }
 
 .itemWrap {
   width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border: 1px solid #666;
+  padding: 5px 10px;
+}
+
+.itemCheckbox {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
 }
 
 .listItem {
@@ -29,7 +44,18 @@
 
 .btnRemoveTodo {
   background: transparent;
-  border: none;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  width: 30px;
+  height: 30px;
+  background: #fd060654;
+  color: #fff;
+}
+.checkboxComplete {
+  margin-right: 15px;
 }
 
 .activeItems {
