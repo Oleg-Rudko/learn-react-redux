@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { clearTodo } from "../../redux/helperFunctions";
 import { useDispatch} from "react-redux";
 
-const BtnClearCompleted = () => {
+const BtnClearTodoList = () => {
 const dispatch = useDispatch();
   
 
@@ -13,10 +13,10 @@ const dispatch = useDispatch();
         variant="danger"
         onClick={() => dispatch(clearTodo())}
       >
-        Danger
+        Clear todo list
       </Button>
     </div>
   );
 };
 
-export default BtnClearCompleted;
+export default BtnClearTodoList;

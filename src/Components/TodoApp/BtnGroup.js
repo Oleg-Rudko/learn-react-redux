@@ -1,10 +1,10 @@
 import React from 'react';
-import BtnClearCompleted from './BtnClearCompleted';
+import BtnClearTodoList from './BtnClearTodoList';
 
 const BtnGroup = () => {
   return (
     <div>
-      <BtnClearCompleted />
+      <BtnClearTodoList />
     </div>
   )
 }
