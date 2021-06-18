@@ -5,9 +5,17 @@ import "./todoList.css";
 
 const ActiveItems = () => {
   const arrayTodos = useSelector(getTodos);
-  const itemsLeft = arrayTodos.length;
+  const itemsLeft = arrayTodos;
+  let count = 0;
 
-  return <p className="activeItems">{itemsLeft} items left</p>;
+  itemsLeft.find(({isActive}) => {
+    if(!isActive) {
+      count += 1;
+    }
+    return undefined;
+  });
+
+  return <p className="activeItems">{count} items left</p>;
 };
 
 export default ActiveItems;
