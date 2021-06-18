@@ -11,3 +11,9 @@ export const getAllTodosChecked = createSelector(getTodos, (todos) => {
     return false;
   }
 });
+
+
+// 1. Create initial state new key filterTodos by default it'll be default (filterTodos: "default")
+// 2. Create new selector getFilterTodos
+// 3. Update getTodos selector to reselector and create switch case for filtering
+// 4. Create buttons and store the value in redux("default", "complete", "acvite")
