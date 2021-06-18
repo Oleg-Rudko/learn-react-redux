@@ -54,6 +54,9 @@
   background: #fd060654;
   color: #fff;
 }
+.checkboxComplete {
+  margin-right: 15px;
+}
 
 .activeItems {
   width: 70%;

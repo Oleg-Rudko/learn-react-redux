@@ -7,14 +7,19 @@ const ButtonAllCompleted = () => {
   const allTodosChecked = useSelector(getAllTodosChecked);
 
   return (
-    <label>
+    <div className='wrapLabelComplete'>
       <input
+        id="checkboxComplete"
+        className='checkboxComplete'
         type="checkbox"
         onChange={(e) => dispatch(allCompleted({ isActive: e.target.checked }))}
         checked={allTodosChecked}
       />
-      check all
-    </label>
+      <label for="checkboxComplete">
+        Check all
+      </label>
+    </div>
+    
   );
 };
 
