@@ -15,7 +15,7 @@ const ButtonAllCompleted = () => {
         onChange={(e) => dispatch(allCompleted({ isActive: e.target.checked }))}
         checked={allTodosChecked}
       />
-      <label for="checkboxComplete">
+      <label htmlFor="checkboxComplete">
         Check all
       </label>
     </div>

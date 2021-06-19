@@ -15,6 +15,7 @@ export const getAllTodosChecked = createSelector(getTodos, (todos) => {
 
 export const itemsLeft = createSelector(getTodos, (todos) => {
   return todos.filter(({ isActive }) => !isActive).length;
+});
 
 export const getFilterTodos = createSelector(
   getTodos,
