@@ -1,13 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { getTodos } from "../../redux/selectors";
+import { itemsLeft } from "../../redux/selectors";
+import BtnGroup from "./btnGroup/BtnGroup";
 import "./todoList.css";
 
 const ActiveItems = () => {
-  const arrayTodos = useSelector(getTodos);
-  const itemsLeft = arrayTodos.length;
+  const countItems = useSelector(itemsLeft);
 
-  return <p className="activeItems">{itemsLeft} items left</p>;
+  return (
+    <div className="activeItems">
+      <p>{countItems} items left</p>
+      <BtnGroup />
+    </div>
+  ) 
 };
 
 export default ActiveItems;

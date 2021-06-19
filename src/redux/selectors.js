@@ -1,6 +1,7 @@
 import { createSelector } from "reselect";
 
 export const getTodos = (state) => state.arrayTodos;
+export const getFilterName = (state) => state.filterTodos;
 
 export const getAllTodosChecked = createSelector(getTodos, (todos) => {
   const resultOfTodos = todos.find(({ isActive }) => !isActive);
@@ -12,8 +13,25 @@ export const getAllTodosChecked = createSelector(getTodos, (todos) => {
   }
 });
 
+export const itemsLeft = createSelector(getTodos, (todos) => {
+  return todos.filter(({ isActive }) => !isActive).length;
 
-// 1. Create initial state new key filterTodos by default it'll be default (filterTodos: "default")
-// 2. Create new selector getFilterTodos
-// 3. Update getTodos selector to reselector and create switch case for filtering
-// 4. Create buttons and store the value in redux("default", "complete", "acvite")
+export const getFilterTodos = createSelector(
+  getTodos,
+  getFilterName,
+  (todos, filterName) => {
+    switch (filterName) {
+      case "active": {
+        return todos.filter((todo) => todo.isActive);
+      }
+
+      case "completed": {
+        return todos.filter(({ isActive }) => !isActive);
+      }
+
+      default: {
+        return todos;
+      }
+    }
+  }
+);
