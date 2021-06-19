@@ -18,7 +18,8 @@ const reducer = (state = initialState, action) => {
 
     case "CLEAR_TODO": {
       return {
-        arrayTodos: action.value,
+        ...state,
+        arrayTodos: [],
       }
     }
 
@@ -41,6 +42,13 @@ const reducer = (state = initialState, action) => {
           return { ...item, isActive: action.value };
         }),
       };
+    }
+
+    case "CHANGE_FILTER_NAME": {
+      return {
+        ...state,
+        filterTodos: action.value
+      }
     }
 
     default: {

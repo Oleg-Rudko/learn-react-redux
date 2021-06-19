@@ -1,12 +1,12 @@
 import React from "react";
-import { getTodos } from "../../redux/selectors";
+import { getFilterTodos } from "../../redux/selectors";
 import { useSelector } from "react-redux";
 import BtnRemove from "./BtnRemove";
 import ItemTask from "./ItemTask";
 import "./todoList.css";
 
 const TodoList = () => {
-  const arrayTodos = useSelector(getTodos);
+  const arrayTodos = useSelector(getFilterTodos);
 
   return (
     <ul className="listTodo">

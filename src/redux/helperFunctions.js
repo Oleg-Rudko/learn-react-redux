@@ -10,7 +10,6 @@ export const removeTodo = (id) => ({
 
 export const clearTodo = () => ({
   type: "CLEAR_TODO",
-  value: [],
 })
 
 export const complete = ({ isActive, id }) => ({
@@ -22,4 +21,9 @@ export const complete = ({ isActive, id }) => ({
 export const allCompleted = ({ isActive }) => ({
   type: "ALL_COMPLETE",
   value: isActive,
+});
+
+export const changeFilterName = ( name ) => ({
+  type: "CHANGE_FILTER_NAME",
+  value: name,
 });
