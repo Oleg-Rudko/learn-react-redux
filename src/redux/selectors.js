@@ -23,11 +23,11 @@ export const getFilterTodos = createSelector(
   (todos, filterName) => {
     switch (filterName) {
       case "active": {
-        return todos.filter((todo) => todo.isActive);
+        return todos.filter((todo) => !todo.isActive);
       }
 
       case "completed": {
-        return todos.filter(({ isActive }) => !isActive);
+        return todos.filter(({ isActive }) => isActive);
       }
 
       default: {
