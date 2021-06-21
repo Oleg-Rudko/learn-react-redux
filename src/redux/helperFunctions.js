@@ -27,3 +27,8 @@ export const changeFilterName = ( name ) => ({
   type: "CHANGE_FILTER_NAME",
   value: name,
 });
+
+export const editTodoValue = (arg) => ({
+  type: "EDIT_TODO_VALUE",
+  value: arg,
+});

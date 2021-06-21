@@ -51,6 +51,19 @@ const reducer = (state = initialState, action) => {
       }
     }
 
+    case "EDIT_TODO_VALUE": {
+      return {
+        ...state,
+        editTodoValue: action.value,
+        arrayTodos: state.arrayTodos.map((item) => {
+          if(item.id !== action.value.id) {
+            return item;
+          }
+          return {...item, name: action.value.value}
+        }),
+      }
+    }
+
     default: {
       return state;
     }
