@@ -2,6 +2,7 @@ import { createSelector } from "reselect";
 
 export const getTodos = (state) => state.arrayTodos;
 export const getFilterName = (state) => state.filterTodos;
+export const getEditTodo = (state) => state.editTodoValue;
 
 export const getAllTodosChecked = createSelector(getTodos, (todos) => {
   const resultOfTodos = todos.find(({ isActive }) => !isActive);
